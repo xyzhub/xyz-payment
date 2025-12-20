@@ -1,0 +1,55 @@
+{
+  "name": "@xyz/payment",
+  "version": "0.0.1",
+  "description": "Payment provider abstraction for processing payments via multiple providers",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./providers/*": {
+      "types": "./dist/provider/*.d.ts",
+      "import": "./dist/provider/*.mjs",
+      "require": "./dist/provider/*.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "payment",
+    "checkout",
+    "stripe",
+    "lemonsqueezy",
+    "polar",
+    "creem",
+    "dodopayments",
+    "tap"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@xyz/logger": "*",
+    "@xyz/webhook-verifier": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
