@@ -1,0 +1,16 @@
+# Source files (dist is included via files in package.json)
+*.ts
+!*.d.ts
+tsconfig.json
+tsup.config.ts
+
+# Development
+.git
+.gitignore
+.DS_Store
+node_modules
+example-code
+
+# IDE
+.vscode
+.idea
